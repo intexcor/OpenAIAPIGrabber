@@ -8,13 +8,13 @@ setup(
     description='A python package for interacting with OpenAI API without needing API keys.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/Tophness/OpenAIAPIGrabber',
+    url='https://github.com/qinlinwu/OpenAIAPIGrabber',
     packages=['OpenAIAPIGrabber', 'OpenAIAPIGrabber.chat', 'OpenAIAPIGrabber.loader'],
     install_requires=[
         'selenium==4.10.0',
         'undetected-chromedriver==3.5.0',
         'requests==2.31.0',
-        'PyYAML==6.0',
+        'PyYAML==6.0.1',
         'get-chrome-driver==1.3.12',
         'pypiwin32==223'
     ],
