@@ -49,9 +49,9 @@ class OpenAIChat:
     def get_chrome_install_location(self, p64bit):
         import winreg
         if p64bit:
-            registry_path = r"Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome Beta"
+            registry_path = r"Program Files\Google\Chrome\Application\chrome"
         else:
-            registry_path = r"Software\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome Beta"
+            registry_path = r"Program Files\Google\Chrome\Application\chrome"
         try:
             with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, registry_path) as key:
                 install_location, _ = winreg.QueryValueEx(key, "InstallLocation")
@@ -61,10 +61,10 @@ class OpenAIChat:
 
     def download_chrome(self, p64bit):
         if(p64bit):
-            if(self.download_and_extract_file('https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/115.0.5790.24/win64/chrome-win64.zip')):
+            if(self.download_and_extract_file('https://storage.googleapis.com/chrome-for-testing-public/126.0.6478.62/win64/chromedriver-win64.zip')):
                 self.chrome_path = os.path.join('chrome-win64', "chrome.exe")
         else:
-            if(self.download_and_extract_file('https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/115.0.5790.24/win32/chrome-win32.zip')):
+            if(self.download_and_extract_file('https://storage.googleapis.com/chrome-for-testing-public/126.0.6478.62/win64/chromedriver-win32.zip')):
                 self.chrome_path = os.path.join('chrome-win32', "chrome.exe")
 
     def set_defaults(self):
