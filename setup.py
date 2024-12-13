@@ -14,7 +14,7 @@ setup(
         'selenium==4.10.0',
         'undetected-chromedriver==3.5.0',
         'requests==2.31.0',
-        'PyYAML==6.0.1',
+        'PyYAML==6.0.2',
         'get-chrome-driver==1.3.12',
         'pypiwin32==223'
     ],
